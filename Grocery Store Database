@@ -1,0 +1,30 @@
+Create a grocery store database
+
+CREATE TABLE clothingstore (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, items_selled INTEGER, size TEXT); 
+INSERT INTO clothingstore VALUES (1, "floral blouse", 6, 10, 3, 0);
+INSERT INTO clothingstore VALUES (2, "jeans", 15, 50, 40, 4);
+INSERT INTO clothingstore VALUES (3, "black mini dress", 70, 45, 65, 6);
+INSERT INTO clothingstore VALUES (4, "white t shirt", 100, 25, 89, 10); 
+INSERT INTO clothingstore VALUES (5, "black leggins", 8, 50, 7, 8);
+INSERT INTO clothingstore VALUES (6, "graphic tee", 7, 15, 1, 12);
+INSERT INTO clothingstore VALUES (7, "black skirt", 79, 41, 47, 6);
+INSERT INTO clothingstore VALUES (8, "red tank top", 9,45,7,8);
+INSERT INTO clothingstore VALUES (9, "maxi dress", 12, 59, 10, 10);
+INSERT INTO clothingstore VALUES (10, "midi dress", 80, 74, 45, 4);
+INSERT INTO clothingstore VALUES (11, "green pants", 4, 89, 2, 0);
+INSERT INTO clothingstore VALUES (12, "mom shorts", 56, 50, 40, 8);
+INSERT INTO clothingstore VALUES (13, "blue bikini", 41, 80, 40, 10);
+INSERT INTO clothingstore VALUES (14, "red bikini", 9, 99, 7, 4);
+INSERT INTO clothingstore VALUES (15, "red tube top", 45, 87, 40, 2);
+SELECT name, SUM(items_selled) FROM clothingstore GROUP BY price ; 
+
+
+--display the database ordered by price. 
+SELECT * FROM store
+ORDER BY price desc; 
+
+--what is the avg price of items in the bulk section? 
+SELECT AVG(price) "avg bulk name price"
+FROM store
+where section='bulk'; 
+
